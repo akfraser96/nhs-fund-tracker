@@ -36,6 +36,33 @@ h3 {
     font-size: 1.75em;
 }
 
+/* Add a faint horizontal line above all output elements */
+div.output, 
+div.figure, 
+pre, 
+img, 
+iframe, 
+table, 
+div.girafe-container, 
+div.html-widget-output {
+    border-top: 2px solid rgba(0, 0, 0, 0.2); /* Light grey line */
+    margin-top: 10px; /* Add space above the line */
+    padding-top: 2px; /* Add space below the line */
+}
+
+/* Specific style for ggiraph and htmlwidgets */
+div.girafe-container {
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    padding-top: 2px;
+}
+
+div.girafe html-widget html-fill-item-overflow-hidden html-fill-item html-widget-static-bound {
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    padding-top: 2px;
+}
+
 /* Code block styles */
 pre {
     background: #272822;
@@ -43,13 +70,35 @@ pre {
     border-radius: 5px;
     padding: 10px;
     overflow-x: auto;
+    border-top: 2px solid rgba(0, 0, 0, 0.2); 
+    margin-top: 5px; 
+    padding-top: 3px; 
 }
 
+/* Add a faint horizontal line above the parent div of girafe output */
+div[style*="display: flex; justify-content: space-between"] {
+    border-top: 2px solid rgba(0, 0, 0, 0.2); /* Light grey line */
+    margin-top: 10px; /* Add space above the line */
+    margin-bottom: -5px; /* Add space below the line */
+    padding-top: 2px; /* Add space below the line */
+}
+
+/* Add a faint horizontal line above the parent div of girafe output */
+div[style*="flex: 1; overflow: hidden; justify-content: center; align-items: center;"] {
+    border-top: 2px solid rgba(0, 0, 0, 0.2); /* Light grey line */
+    margin-top: 10px; /* Add space above the line */
+    margin-bottom: -5px; /* Add space below the line */
+    padding-top: 2px; /* Add space below the line */
+}
+
+
+/* Inline code styles */
 code {
     background: white;
     padding: 2px 4px;
     border-radius: 3px;
 }
+
 
 /* Table styles */
 table {
